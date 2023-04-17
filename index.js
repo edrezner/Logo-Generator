@@ -6,7 +6,13 @@ const prompts = [
     {
         type: 'input',
         name: 'title',
-        message: 'Enter a logo title with up to three characters.'
+        message: 'Enter a logo title with up to three characters.',
+        validate: function(input) {
+            if (input.length > 3) {
+                return 'Logo title must be 3 characters or less.'
+            }
+            return true;
+        },
     },
     {
         type: 'input',
@@ -32,7 +38,7 @@ function writeToFile (fileName, data) {
 }
 
 function init () {
-    fs.prompt(prompts)
+    inquirer.prompt(prompts)
         .then((data) => {
             const logo = generateLogo(data);
             writeToFile('logo.svg', logo)
