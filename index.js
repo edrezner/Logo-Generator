@@ -40,7 +40,7 @@ function writeToFile (fileName, data) {
 function init () {
     inquirer.prompt(prompts)
         .then((data) => {
-            const logo = generateLogo(data);
+            const logo = shapes(data);
             writeToFile('logo.svg', logo)
         })
         .catch((err) => console.error(err));
