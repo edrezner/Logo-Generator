@@ -1,11 +1,6 @@
-<svg version="1.1"
-     width="300" height="200"
-     xmlns="http://www.w3.org/2000/svg">
 
-  <rect width="300" height="200" fill="white" />
-
-  <circle cx="150" cy="100" r="75" fill=black />
-
-  <text x="150" y="115" font-size="60" text-anchor="middle" fill=white>HVC</text>
-
-</svg>
+      <svg version="1.1" width="300" height="200" xmlns="http://www.w3.org/2000/svg">
+      <rect width="300" height="200" fill="white" />
+      <polygon points="150,10 290,150 20,150" fill="Blue" />
+      <text x="150" y="115" font-size="60" text-anchor="middle" fill="#FF0000">END</text>
+      </svg>
